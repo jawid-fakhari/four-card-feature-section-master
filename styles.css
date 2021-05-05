@@ -1,0 +1,143 @@
+/* - Mobile: 375px - Desktop: 1440px */
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  position: relative;
+  bottom: 20px;
+  font-family: "Poppins", sans-serif;
+  background-color: hsl(0, 0%, 98%);
+  font-size: 15px;
+  text-align: center;
+  color: hsl(229, 6%, 66%);
+  margin-top: 50px;
+}
+.blue {
+  color: hsl(234, 12%, 34%);
+}
+
+/*************** header *******************/
+.header {
+  width: 300px;
+  margin: 0 auto;
+}
+.header__title {
+  line-height: 0.6;
+}
+.header__h2--lighter {
+  font-weight: 200;
+}
+.header__txt {
+  font-weight: 400;
+}
+
+/************ cards section *****************/
+.cards-container {
+  padding-bottom: 50px;
+}
+.cards {
+  background-color: white;
+  border-radius: 10px;
+  width: 300px;
+  margin: 30px auto;
+  box-shadow: 15px 5px 50px hsl(228, 3%, 70%);
+  overflow: hidden;
+}
+.cards__content {
+  border-top: 4px solid;
+  padding: 5px 20px 20px;
+  text-align: left;
+}
+.supervisor {
+  color: hsl(180, 62%, 55%);
+}
+.team-builder {
+  border-color: hsl(0, 78%, 62%);
+}
+.karma {
+  border-color: hsl(34, 97%, 64%);
+}
+.calculator {
+  border-color: hsl(212, 86%, 64%);
+}
+.cards__h3-like {
+  font-weight: 600;
+  font-size: 18px;
+}
+.cards__p-- {
+  font-size: 13px;
+  margin-top: -10px;
+}
+.cards__img {
+  margin: 0 20px 20px;
+  text-align: right;
+}
+
+.uno {
+    grid-area: uno;
+}
+.due {
+    grid-area: due;
+}
+.tre {
+    grid-area: tre;
+}
+.quattro {
+    grid-area: quattro;
+}
+/************** foote **************/
+.attribution {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+/************* media descktop screen *************/
+@media (min-width: 960px) {
+  .header {
+    width: 500px;
+  }
+  .cards-container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-areas:
+    'uno due quattro'
+    '. tre .';
+  }
+  .uno {
+      position: relative;
+      top: 150px; 
+  }
+  .due {
+      position: relative;
+      top: 5%;
+  }
+  .tre {
+      position: relative;
+      bottom: 5%;
+  }
+  .quattro {
+      position: relative;
+      top: 150px; 
+  }
+}
+@media (min-width: 1250px) {
+    .uno {
+        position: relative;
+        top: 150px; left: 25%;
+    }
+    .due {
+        position: relative;
+        top: 5%; 
+    }
+    .tre {
+        position: relative;
+        bottom: 5%;
+    }
+    .quattro {
+        position: relative;
+        top: 150px; right: 25%;
+    }
+}
